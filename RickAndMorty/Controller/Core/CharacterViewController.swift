@@ -14,8 +14,14 @@ class CharacterViewController: UIViewController {
         view.backgroundColor = .systemBackground
         title = "Character"
         
-        let request = Request(endpoint: .character)
-        print(request.url)
+        Service.shared.execute(.listCharactersRequests, expecting: RMGetAllCharactersResponse.self) { result in
+            switch result {
+            case .success(let model):
+                print(String(describing: model))
+            case .failure(let error):
+                print(String(describing: error))
+            }
+        }
     }
 
 }
