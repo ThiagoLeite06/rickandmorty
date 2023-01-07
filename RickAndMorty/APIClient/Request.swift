@@ -11,6 +11,7 @@ import Foundation
 /// Object that represents a single API call
 final class Request {
     
+    /// API Constants
     private struct Constants {
         static let baseUrl = "https://rickandmortyapi.com/api"
     }
@@ -70,6 +71,10 @@ final class Request {
     /// Desired http method
     public let httpMethod = "GET"
     
- 
-    
+}
+
+extension Request {
+    static let listCharactersRequests = Request(endpoint: .character)
+    static let listEpisodesRequest = Request(endpoint: .episode)
+    static let listLocationsRequest = Request(endpoint: .location)
 }
