@@ -7,7 +7,7 @@
 
 import UIKit
 
-class CharacterViewController: UIViewController {
+final class RMCharacterViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -22,6 +22,7 @@ class CharacterViewController: UIViewController {
                 print(String(describing: error))
             }
         }
+        
     }
 
 }

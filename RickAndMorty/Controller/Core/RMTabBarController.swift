@@ -7,8 +7,8 @@
 
 import UIKit
 
-/// Classe principal da navegação
-final class TabBarController: UITabBarController {
+/// Controller to house tabs and root tab controllers
+final class RMTabBarController: UITabBarController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -16,10 +16,10 @@ final class TabBarController: UITabBarController {
     }
     
     private func setupTabs() {
-        let characterVC = CharacterViewController()
-        let locationVC = LocationViewController()
-        let episodesVC = EpisodeViewController()
-        let settingsVC = SettingsViewController()
+        let characterVC = RMCharacterViewController()
+        let locationVC = RMLocationViewController()
+        let episodesVC = RMEpisodeViewController()
+        let settingsVC = RMSettingsViewController()
         
         characterVC.title = "Characters"
         locationVC.title = "Location"

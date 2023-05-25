@@ -7,6 +7,7 @@
 
 import Foundation
 
+/// Represents unique API endpoint
 @frozen enum Endpoint: String {
     case character
     case location
