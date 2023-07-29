@@ -35,7 +35,7 @@ final class CharacterCollectionViewCellPresenter: Hashable, Equatable {
                completion(.failure(URLError(.badURL)))
                return
            }
-//           RMImageLoader.shared.downloadImage(url, completion: completion)
+           ImageLoader.shared.downloadImage(url, completion: completion)
        }
 
        // MARK: - Hashable
