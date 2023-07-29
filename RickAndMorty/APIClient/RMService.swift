@@ -9,10 +9,10 @@ import Foundation
 
 
 /// Primary API service object to get Rick and Morty Data
-final class Service {
+final class RMService {
     
     /// Shared singleton instance
-    static let shared = Service()
+    static let shared = RMService()
     
     
     /// Privatized constructor
@@ -28,7 +28,7 @@ final class Service {
     ///   - request: Request instance
     ///   - type: The type if object we expect to get back
     ///   - completion: Callback with data or error
-    public func execute<T: Codable>(_ request: Request,
+    public func execute<T: Codable>(_ request: RMRequest,
                                     expecting type: T.Type,
                                     completion: @escaping (Result<T, Error>) -> Void) {
         guard let urlRequest = self.request(from: request) else {
@@ -56,7 +56,7 @@ final class Service {
     
     // MARK: - Private
     
-    private func request(from request: Request) -> URLRequest? {
+    private func request(from request: RMRequest) -> URLRequest? {
         guard let url = request.url else { return nil }
         
         var req = URLRequest(url: url)

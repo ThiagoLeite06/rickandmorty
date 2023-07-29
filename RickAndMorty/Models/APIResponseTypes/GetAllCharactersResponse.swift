@@ -1,5 +1,5 @@
 //
-//  RMGetAllCharactersResponse.swift
+//  GetAllCharactersResponse.swift
 //  RickAndMorty
 //
 //  Created by Thiago Almeida Leite on 07/01/23.
@@ -7,7 +7,7 @@
 
 import Foundation
 
-struct RMGetAllCharactersResponse: Codable {
+struct GetAllCharactersResponse: Codable {
     struct Info: Codable {
         let count: Int
         let pages: Int
@@ -16,5 +16,5 @@ struct RMGetAllCharactersResponse: Codable {
     }
 
     let info: Info
-    let results: [Character]
+    let results: [CharacterModel]
 }
