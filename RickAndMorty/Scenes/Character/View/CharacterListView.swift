@@ -9,8 +9,6 @@ import UIKit
 
 final class CharacterListView: UIView {
     
-    private let presenter = CharacterListViewPresenter()
-    
     private lazy var spinner: UIActivityIndicatorView = {
         let spinner = UIActivityIndicatorView(style: .large)
         spinner.hidesWhenStopped = true
@@ -28,9 +26,6 @@ final class CharacterListView: UIView {
         collectionView.translatesAutoresizingMaskIntoConstraints = false
         collectionView.register(CharacterCollectionViewCell.self,
                                 forCellWithReuseIdentifier: CharacterCollectionViewCell.cellIdentifier)
-//        collectionView.register(self,
-//                                forSupplementaryViewOfKind: UICollectionView.elementKindSectionFooter,
-//                                withReuseIdentifier: "cell")
         return collectionView
     }()
     
@@ -41,8 +36,6 @@ final class CharacterListView: UIView {
         addSubview(collectionView)
         addConstraints()
         spinner.startAnimating()
-        presenter.delegate = self
-        presenter.fetchCharacters()
         setUpCollectionView()
     }
     
@@ -65,16 +58,16 @@ final class CharacterListView: UIView {
     }
     
     private func setUpCollectionView() {
-        collectionView.dataSource = presenter
-        collectionView.delegate = presenter
+//        collectionView.dataSource = presenter
+//        collectionView.delegate = presenter
     }
 }
 
-extension CharacterListView: CharacterListViewPresenterDelegate {
-    func didSelectCharacter(_ character: Character) {
-//        delegate?.rmCharacterListView(self, didSelectCharacter: character)
+extension CharacterListView: CharacterListViewPresenterProtocol {
+    func loadInitialCharacters() {
+        //
     }
-
+    
     func didLoadInitialCharacters() {
         spinner.stopAnimating()
         collectionView.isHidden = false
@@ -84,9 +77,4 @@ extension CharacterListView: CharacterListViewPresenterDelegate {
         }
     }
 
-    func didLoadMoreCharacters(with newIndexPaths: [IndexPath]) {
-        collectionView.performBatchUpdates {
-            self.collectionView.insertItems(at: newIndexPaths)
-        }
-    }
 }

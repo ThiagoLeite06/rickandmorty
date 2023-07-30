@@ -7,22 +7,34 @@
 
 import UIKit
 
-final class CharacterViewController: UIViewController {
+protocol CharacterListViewControllerProtocol: NSObject {
+    func showCharacterList()
+}
+
+final class CharacterListViewController: UIViewController {
     
     private let characterListView = CharacterListView()
+    
+    weak var interactor: CharacterListInteractorProtocol?
     
     override func viewDidLoad() {
         super.viewDidLoad()
         view.backgroundColor = .systemBackground
         title = "Character"
-        
         setUpView()
-//        addSearchButton()
+        config()
+   
+    }
+    
+    private func config() {
+        let controller = CharacterListViewController()
+        let presenter = CharacterListPresenter(controller: controller)
+        let interactor = CharacterListInteractor(presenter: presenter)
         
+        controller.interactor = interactor
     }
     
     private func setUpView() {
-//        characterListView.delegate = self
         view.addSubview(characterListView)
         NSLayoutConstraint.activate([
             characterListView.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor),
@@ -32,6 +44,10 @@ final class CharacterViewController: UIViewController {
         ])
     }
     
-    
-    
+}
+
+extension CharacterListViewController: CharacterListViewControllerProtocol {
+    func showCharacterList() {
+        print("Mostrar a lista de Character")
+    }
 }

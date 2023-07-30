@@ -7,7 +7,6 @@
 
 import UIKit
 
-
 final class CharacterCollectionViewCellPresenter: Hashable, Equatable {
     public let characterName: String
     private let characterStatus: CharacterStatus
