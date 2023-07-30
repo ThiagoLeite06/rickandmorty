@@ -8,33 +8,19 @@
 import UIKit
 
 protocol CharacterListViewPresenterProtocol: AnyObject {
-    func loadInitialCharacters()
+    func loadInitialCharacters(characters: [CharacterModel])
 }
 
 final class CharacterListPresenter: NSObject {
     
     private weak var controller: CharacterListViewControllerProtocol?
     
-    
     init(controller: CharacterListViewControllerProtocol?) {
         self.controller = controller
     }
     
-    private var characters: [CharacterModel] = [] {
-        didSet {
-            for character in characters {
-                let presenter = CharacterCollectionViewCellPresenter(
-                    characterName: character.name,
-                    characterStatus: character.status,
-                    characterImageUrl: URL(string: character.image)
-                )
-                if !cellPresenters.contains(presenter) {
-                    cellPresenters.append(presenter)
-                }
-            }
-        }
-    }
-    
+    private var characters: [CharacterModel] = []
+      
     private var cellPresenters: [CharacterCollectionViewCellPresenter] = []
     
     private var apiInfo: GetAllCharactersResponse.Info? = nil
@@ -85,7 +71,7 @@ extension CharacterListPresenter: UICollectionViewDataSource, UICollectionViewDe
 }
 
 extension CharacterListPresenter: CharacterListViewPresenterProtocol {
-    func loadInitialCharacters() {
+    func loadInitialCharacters(characters: [CharacterModel]) {
         controller?.showCharacterList()
     }  
 }

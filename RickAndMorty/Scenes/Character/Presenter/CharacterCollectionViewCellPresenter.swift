@@ -7,6 +7,10 @@
 
 import UIKit
 
+protocol CharacterCollectionViewCellPresenterProtocol: AnyObject {
+    
+}
+
 final class CharacterCollectionViewCellPresenter: Hashable, Equatable {
     public let characterName: String
     private let characterStatus: CharacterStatus
@@ -49,4 +53,10 @@ final class CharacterCollectionViewCellPresenter: Hashable, Equatable {
            hasher.combine(characterImageUrl)
        }
 }
+
+
+extension CharacterCollectionViewCellPresenter: CharacterCollectionViewCellPresenterProtocol {
+    
+}
+
 

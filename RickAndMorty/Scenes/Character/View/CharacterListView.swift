@@ -58,23 +58,56 @@ final class CharacterListView: UIView {
     }
     
     private func setUpCollectionView() {
-//        collectionView.dataSource = presenter
-//        collectionView.delegate = presenter
+        collectionView.dataSource = self
+//        collectionView.delegate = self
     }
 }
 
 extension CharacterListView: CharacterListViewPresenterProtocol {
-    func loadInitialCharacters() {
-        //
+    func loadInitialCharacters(characters: [CharacterModel]) {
+        print(characters)
+        collectionView.reloadData()
+    }
+}
+
+extension CharacterListView: UICollectionViewDataSource {
+    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+//        return presenter?.numberOfCharacters() ?? 0
+        return 3
     }
     
-    func didLoadInitialCharacters() {
-        spinner.stopAnimating()
-        collectionView.isHidden = false
-        collectionView.reloadData() // Initial fetch
-        UIView.animate(withDuration: 0.4) {
-            self.collectionView.alpha = 1
+    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+//        guard let presenter = presenter, let character = presenter.character(at: indexPath.row) else {
+//            fatalError("Error configuring collection view cell")
+//        }
+//
+        guard let cell = collectionView.dequeueReusableCell(
+            withReuseIdentifier: CharacterCollectionViewCell.cellIdentifier,
+            for: indexPath
+        ) as? CharacterCollectionViewCell else {
+            fatalError("Unsupported cell")
         }
+//
+//        cell.configure(with: CharacterCollectionViewCellPresenter(character: character))
+        return cell
     }
-
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
