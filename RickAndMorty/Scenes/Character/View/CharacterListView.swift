@@ -64,17 +64,8 @@ final class CharacterListView: UIView {
 }
 
 extension CharacterListView: CharacterListViewPresenterProtocol {
-    func loadInitialCharacters() {
-        //
-    }
-    
-    func didLoadInitialCharacters() {
-        spinner.stopAnimating()
-        collectionView.isHidden = false
-        collectionView.reloadData() // Initial fetch
-        UIView.animate(withDuration: 0.4) {
-            self.collectionView.alpha = 1
-        }
+    func loadInitialCharacters(characters: [CharacterModel]) {
+        print(characters)
     }
 
 }

@@ -15,7 +15,7 @@ final class CharacterListViewController: UIViewController {
     
     private let characterListView = CharacterListView()
     
-    weak var interactor: CharacterListInteractorProtocol?
+    private var interactor: CharacterListInteractorProtocol?
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -23,15 +23,13 @@ final class CharacterListViewController: UIViewController {
         title = "Character"
         setUpView()
         config()
+        interactor?.loadCharacters()
    
     }
     
     private func config() {
-        let controller = CharacterListViewController()
-        let presenter = CharacterListPresenter(controller: controller)
-        let interactor = CharacterListInteractor(presenter: presenter)
-        
-        controller.interactor = interactor
+        let presenter = CharacterListPresenter(controller: self)
+        self.interactor = CharacterListInteractor(presenter: presenter)
     }
     
     private func setUpView() {

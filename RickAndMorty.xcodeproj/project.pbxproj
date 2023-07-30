@@ -13,12 +13,7 @@
 		37902A972A73604D006DB5BA /* CharacterListInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37902A962A73604D006DB5BA /* CharacterListInteractor.swift */; };
 		37902A992A748595006DB5BA /* CharacterCollectionViewCellPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37902A982A748595006DB5BA /* CharacterCollectionViewCellPresenter.swift */; };
 		37902AA32A749649006DB5BA /* ImageLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37902AA22A749649006DB5BA /* ImageLoader.swift */; };
-		37902AA62A754E26006DB5BA /* Mock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37902AA52A754E26006DB5BA /* Mock.swift */; };
-		37902AA82A755213006DB5BA /* CharacterListFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37902AA72A755213006DB5BA /* CharacterListFactory.swift */; };
 		37902AAB2A75EA62006DB5BA /* CharacterListService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37902AAA2A75EA62006DB5BA /* CharacterListService.swift */; };
-		7A4F31512964F254005E0BE2 /* RMService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A4F31502964F254005E0BE2 /* RMService.swift */; };
-		7A4F31532964F265005E0BE2 /* RMRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A4F31522964F265005E0BE2 /* RMRequest.swift */; };
-		7A4F31552964F347005E0BE2 /* RMEndpoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A4F31542964F347005E0BE2 /* RMEndpoint.swift */; };
 		7A4F315729665ABC005E0BE2 /* RMCharacterGender.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A4F315629665ABC005E0BE2 /* RMCharacterGender.swift */; };
 		7A4F315929665B03005E0BE2 /* CharacterStatus.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A4F315829665B03005E0BE2 /* CharacterStatus.swift */; };
 		7A4F315B29665B38005E0BE2 /* RMSingleLocation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A4F315A29665B38005E0BE2 /* RMSingleLocation.swift */; };
@@ -45,12 +40,7 @@
 		37902A962A73604D006DB5BA /* CharacterListInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharacterListInteractor.swift; sourceTree = "<group>"; };
 		37902A982A748595006DB5BA /* CharacterCollectionViewCellPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharacterCollectionViewCellPresenter.swift; sourceTree = "<group>"; };
 		37902AA22A749649006DB5BA /* ImageLoader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageLoader.swift; sourceTree = "<group>"; };
-		37902AA52A754E26006DB5BA /* Mock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Mock.swift; sourceTree = "<group>"; };
-		37902AA72A755213006DB5BA /* CharacterListFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharacterListFactory.swift; sourceTree = "<group>"; };
 		37902AAA2A75EA62006DB5BA /* CharacterListService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharacterListService.swift; sourceTree = "<group>"; };
-		7A4F31502964F254005E0BE2 /* RMService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RMService.swift; sourceTree = "<group>"; };
-		7A4F31522964F265005E0BE2 /* RMRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RMRequest.swift; sourceTree = "<group>"; };
-		7A4F31542964F347005E0BE2 /* RMEndpoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RMEndpoint.swift; sourceTree = "<group>"; };
 		7A4F315629665ABC005E0BE2 /* RMCharacterGender.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RMCharacterGender.swift; sourceTree = "<group>"; };
 		7A4F315829665B03005E0BE2 /* CharacterStatus.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharacterStatus.swift; sourceTree = "<group>"; };
 		7A4F315A29665B38005E0BE2 /* RMSingleLocation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RMSingleLocation.swift; sourceTree = "<group>"; };
@@ -100,7 +90,6 @@
 				37902A9E2A748F3A006DB5BA /* Presenter */,
 				37902A9D2A748F08006DB5BA /* Interactor */,
 				37902A9C2A748EEA006DB5BA /* Model */,
-				37902AA72A755213006DB5BA /* CharacterListFactory.swift */,
 			);
 			path = Character;
 			sourceTree = "<group>";
@@ -156,14 +145,6 @@
 			path = Utils;
 			sourceTree = "<group>";
 		};
-		37902AA42A754E10006DB5BA /* Mock */ = {
-			isa = PBXGroup;
-			children = (
-				37902AA52A754E26006DB5BA /* Mock.swift */,
-			);
-			path = Mock;
-			sourceTree = "<group>";
-		};
 		37902AA92A75EA2A006DB5BA /* CharacterListService */ = {
 			isa = PBXGroup;
 			children = (
@@ -211,11 +192,9 @@
 		7AFD7C5C2963674100296B9E /* RickAndMorty */ = {
 			isa = PBXGroup;
 			children = (
-				37902AA42A754E10006DB5BA /* Mock */,
 				37902AA12A749633006DB5BA /* Utils */,
 				37902A8E2A7217E7006DB5BA /* Scenes */,
 				7AFD7C7629636A0A00296B9E /* Resources */,
-				7AFD7C75296369F600296B9E /* APIClient */,
 				7AFD7C72296369D300296B9E /* Models */,
 				7AFD7C71296369C900296B9E /* Controller */,
 				7AFD7C6B2963674300296B9E /* Info.plist */,
@@ -238,16 +217,6 @@
 				7AB8E83C2969FA1900BF11CB /* DataTypes */,
 			);
 			path = Models;
-			sourceTree = "<group>";
-		};
-		7AFD7C75296369F600296B9E /* APIClient */ = {
-			isa = PBXGroup;
-			children = (
-				7A4F31502964F254005E0BE2 /* RMService.swift */,
-				7A4F31522964F265005E0BE2 /* RMRequest.swift */,
-				7A4F31542964F347005E0BE2 /* RMEndpoint.swift */,
-			);
-			path = APIClient;
 			sourceTree = "<group>";
 		};
 		7AFD7C7629636A0A00296B9E /* Resources */ = {
@@ -343,25 +312,20 @@
 			buildActionMask = 2147483647;
 			files = (
 				7AFD7C622963674100296B9E /* RMTabBarController.swift in Sources */,
-				7A4F31532964F265005E0BE2 /* RMRequest.swift in Sources */,
 				37902AAB2A75EA62006DB5BA /* CharacterListService.swift in Sources */,
 				37902A932A735970006DB5BA /* CharacterListView.swift in Sources */,
 				7AB8E83F2969FA6400BF11CB /* GetAllCharactersResponse.swift in Sources */,
 				37902A992A748595006DB5BA /* CharacterCollectionViewCellPresenter.swift in Sources */,
 				7AFD7C802963797100296B9E /* RMEpisodeViewController.swift in Sources */,
-				37902AA62A754E26006DB5BA /* Mock.swift in Sources */,
-				7A4F31552964F347005E0BE2 /* RMEndpoint.swift in Sources */,
 				7AFD7C7D29636AD100296B9E /* RMEpisode.swift in Sources */,
 				7AFD7C5E2963674100296B9E /* AppDelegate.swift in Sources */,
 				7AFD7C7B29636AB700296B9E /* CharacterModel.swift in Sources */,
 				7AFD7C7929636AA400296B9E /* RMLocation.swift in Sources */,
 				7A4F315729665ABC005E0BE2 /* RMCharacterGender.swift in Sources */,
 				7AFD7C8629637A3800296B9E /* CharacterListViewController.swift in Sources */,
-				37902AA82A755213006DB5BA /* CharacterListFactory.swift in Sources */,
 				7A4F315B29665B38005E0BE2 /* RMSingleLocation.swift in Sources */,
 				37902AA32A749649006DB5BA /* ImageLoader.swift in Sources */,
 				7AFD7C602963674100296B9E /* SceneDelegate.swift in Sources */,
-				7A4F31512964F254005E0BE2 /* RMService.swift in Sources */,
 				37902A912A721972006DB5BA /* CharacterListPresenter.swift in Sources */,
 				37902A972A73604D006DB5BA /* CharacterListInteractor.swift in Sources */,
 				7A4F315929665B03005E0BE2 /* CharacterStatus.swift in Sources */,
