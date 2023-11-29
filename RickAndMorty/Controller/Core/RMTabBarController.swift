@@ -22,7 +22,7 @@ final class RMTabBarController: UITabBarController {
         let settingsVC = RMSettingsViewController()
         
         characterVC.title = "Characters"
-        locationVC.title = "Location"
+        locationVC.title = "Locations"
         episodesVC.title = "Episodes"
         settingsVC.title = "Settings"
         

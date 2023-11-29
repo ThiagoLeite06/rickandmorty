@@ -174,10 +174,10 @@
 		7AFD7C5C2963674100296B9E /* RickAndMorty */ = {
 			isa = PBXGroup;
 			children = (
+				7AFD7C7629636A0A00296B9E /* Resources */,
 				37902AA12A749633006DB5BA /* Utils */,
 				7AB8E83C2969FA1900BF11CB /* DataTypes */,
 				37902A8E2A7217E7006DB5BA /* Scenes */,
-				7AFD7C7629636A0A00296B9E /* Resources */,
 				7AFD7C71296369C900296B9E /* Controller */,
 				7AFD7C6B2963674300296B9E /* Info.plist */,
 			);
