@@ -145,12 +145,12 @@
 			path = Utils;
 			sourceTree = "<group>";
 		};
-		37902AA92A75EA2A006DB5BA /* CharacterListService */ = {
+		37D61AAB2B16E45E006EE22E /* Recovered References */ = {
 			isa = PBXGroup;
 			children = (
 				37902AAA2A75EA62006DB5BA /* CharacterListService.swift */,
 			);
-			path = CharacterListService;
+			name = "Recovered References";
 			sourceTree = "<group>";
 		};
 		7AB8E83C2969FA1900BF11CB /* DataTypes */ = {
@@ -170,6 +170,7 @@
 			children = (
 				7AFD7C5C2963674100296B9E /* RickAndMorty */,
 				7AFD7C5B2963674100296B9E /* Products */,
+				37D61AAB2B16E45E006EE22E /* Recovered References */,
 			);
 			sourceTree = "<group>";
 		};
@@ -184,7 +185,6 @@
 		7AFD7C5C2963674100296B9E /* RickAndMorty */ = {
 			isa = PBXGroup;
 			children = (
-				7AFD7C7629636A0A00296B9E /* Resources */,
 				37902AA12A749633006DB5BA /* Utils */,
 				7AB8E83C2969FA1900BF11CB /* DataTypes */,
 				37902A8E2A7217E7006DB5BA /* Scenes */,
@@ -207,8 +207,6 @@
 		7AFD7C72296369D300296B9E /* Models */ = {
 			isa = PBXGroup;
 			children = (
-				7AB8E83D2969FA3100BF11CB /* APIResponseTypes */,
-				7AB8E83C2969FA1900BF11CB /* DataTypes */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -465,6 +463,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = NW3H7K8PN7;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = RickAndMorty/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
@@ -491,6 +490,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = NW3H7K8PN7;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = RickAndMorty/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
