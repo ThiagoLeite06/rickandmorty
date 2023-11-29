@@ -58,8 +58,8 @@ final class CharacterListView: UIView {
     }
     
     private func setUpCollectionView() {
-        collectionView.dataSource = self
-//        collectionView.delegate = self
+//        collectionView.dataSource = presenter
+//        collectionView.delegate = presenter
     }
 }
 

@@ -13,6 +13,7 @@
 		37902A972A73604D006DB5BA /* CharacterListInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37902A962A73604D006DB5BA /* CharacterListInteractor.swift */; };
 		37902A992A748595006DB5BA /* CharacterCollectionViewCellPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37902A982A748595006DB5BA /* CharacterCollectionViewCellPresenter.swift */; };
 		37902AA32A749649006DB5BA /* ImageLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37902AA22A749649006DB5BA /* ImageLoader.swift */; };
+		37902AAB2A75EA62006DB5BA /* CharacterListService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37902AAA2A75EA62006DB5BA /* CharacterListService.swift */; };
 		7A4F315729665ABC005E0BE2 /* RMCharacterGender.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A4F315629665ABC005E0BE2 /* RMCharacterGender.swift */; };
 		7A4F315929665B03005E0BE2 /* CharacterStatus.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A4F315829665B03005E0BE2 /* CharacterStatus.swift */; };
 		7A4F315B29665B38005E0BE2 /* RMSingleLocation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A4F315A29665B38005E0BE2 /* RMSingleLocation.swift */; };
@@ -39,6 +40,7 @@
 		37902A962A73604D006DB5BA /* CharacterListInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharacterListInteractor.swift; sourceTree = "<group>"; };
 		37902A982A748595006DB5BA /* CharacterCollectionViewCellPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharacterCollectionViewCellPresenter.swift; sourceTree = "<group>"; };
 		37902AA22A749649006DB5BA /* ImageLoader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageLoader.swift; sourceTree = "<group>"; };
+		37902AAA2A75EA62006DB5BA /* CharacterListService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharacterListService.swift; sourceTree = "<group>"; };
 		7A4F315629665ABC005E0BE2 /* RMCharacterGender.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RMCharacterGender.swift; sourceTree = "<group>"; };
 		7A4F315829665B03005E0BE2 /* CharacterStatus.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharacterStatus.swift; sourceTree = "<group>"; };
 		7A4F315A29665B38005E0BE2 /* RMSingleLocation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RMSingleLocation.swift; sourceTree = "<group>"; };
@@ -143,6 +145,14 @@
 			path = Utils;
 			sourceTree = "<group>";
 		};
+		37902AA92A75EA2A006DB5BA /* CharacterListService */ = {
+			isa = PBXGroup;
+			children = (
+				37902AAA2A75EA62006DB5BA /* CharacterListService.swift */,
+			);
+			path = CharacterListService;
+			sourceTree = "<group>";
+		};
 		7AB8E83C2969FA1900BF11CB /* DataTypes */ = {
 			isa = PBXGroup;
 			children = (
@@ -178,6 +188,8 @@
 				37902AA12A749633006DB5BA /* Utils */,
 				7AB8E83C2969FA1900BF11CB /* DataTypes */,
 				37902A8E2A7217E7006DB5BA /* Scenes */,
+				7AFD7C7629636A0A00296B9E /* Resources */,
+				7AFD7C72296369D300296B9E /* Models */,
 				7AFD7C71296369C900296B9E /* Controller */,
 				7AFD7C6B2963674300296B9E /* Info.plist */,
 			);
@@ -190,6 +202,15 @@
 				7AFD7C7E29636B0C00296B9E /* Core */,
 			);
 			path = Controller;
+			sourceTree = "<group>";
+		};
+		7AFD7C72296369D300296B9E /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				7AB8E83D2969FA3100BF11CB /* APIResponseTypes */,
+				7AB8E83C2969FA1900BF11CB /* DataTypes */,
+			);
+			path = Models;
 			sourceTree = "<group>";
 		};
 		7AFD7C7629636A0A00296B9E /* Resources */ = {
@@ -285,6 +306,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				7AFD7C622963674100296B9E /* RMTabBarController.swift in Sources */,
+				37902AAB2A75EA62006DB5BA /* CharacterListService.swift in Sources */,
 				37902A932A735970006DB5BA /* CharacterListView.swift in Sources */,
 				7AB8E83F2969FA6400BF11CB /* GetAllCharactersResponse.swift in Sources */,
 				37902A992A748595006DB5BA /* CharacterCollectionViewCellPresenter.swift in Sources */,
